@@ -1,0 +1,2 @@
+# Tamagotchi
+Tamagotchi mini-project
