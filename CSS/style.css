@@ -1,13 +1,77 @@
 body {
-	background-color: ##A1CDE1;
+	background-color: #A1CDE1;
 	font-family: 'Turret Road', cursive;
+	font-size: 150%;
+}
+
+.tamagotchiContainer {
+	display: grid;
+	min-height: 100vh;
+	grid-template-columns: 50% 50%;
+	grid-template-rows: 100px 1fr 100px ;
+	grid-template-areas: 
+	"otherBiz aliveBiz"
+	"tamagotchi tamagotchi"
+	"keepEmAlive keepEmAlive"
 
 }
+
 
 .otherBiz {
+	grid-area: otherBiz;
+	text-align: left;
 
-	
 }
 
+.name, .age {
+	height: 33%
+}
+
+
 .aliveBiz {
+	grid-area: aliveBiz;
+	text-align: right;
+
+}
+
+.hungry, .sleepy, .bored {
+	height: 33%
+
+}
+
+
+.keepEmAlive {
+	grid-area: keepEmAlive;
+	grid-column: 1 / span 2;
+
+
+}
+
+
+.sleepyButton, .hungryButton, .boredButton {
+	text-align: center;
+	display: inline-block;
+	width: 25%;
+}
+
+.tamagotchi {
+	grid-area: tamagotchi;
+	grid-column: 1 / span 2;
+    position: relative;
+    position: relative;
+    animation-duration: 10s;
+    animation-name: slidein;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 0%; 
+  }
+
+  to {
+    margin-left: 50%;
+  }
 }
